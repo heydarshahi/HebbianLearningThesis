@@ -4,4 +4,4 @@ results/stats/
 results.tar
 **/__pycache__/**
 submit.slurm
-*.o*
+job_outputs/
