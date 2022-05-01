@@ -78,15 +78,15 @@ class Net(nn.Module):
 		
 		self.fc5 = H.HebbianMap2d(
 			in_channels=self.conv_output_shape[0],
-			out_size=(15, 20),
+			out_size=(32, 32),
 			kernel_size=(self.conv_output_shape[1], self.conv_output_shape[2]),
 			out=H.clp_cos_sim2d,
 			eta=0.1,
 		)  # conv_output_shape-shaped input, 15x20=300 output channels
-		self.bn5 = nn.BatchNorm2d(300)  # Batch Norm layer
+		self.bn5 = nn.BatchNorm2d(1024)  # Batch Norm layer
 		
 		self.fc6 = H.HebbianMap2d(
-			in_channels=300,
+			in_channels=1024,
 			out_size=P.NUM_CLASSES,
 			kernel_size=1,
 			competitive=False,
