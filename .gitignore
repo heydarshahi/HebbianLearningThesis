@@ -5,3 +5,5 @@ results.tar
 **/__pycache__/**
 submit.slurm
 job_outputs/
+results/gdes/**imagenet/**
+results/hebb/**imagenet/**

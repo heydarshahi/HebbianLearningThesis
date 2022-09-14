@@ -5,14 +5,16 @@ import utils
 import data
 import params as P
 import config as C
-
+import pdb
 
 # Evaluate a model against a batch of data, compute predicted classes, count the number of correct guesses and the
 # total number of samples in the batch and optionally evaluate a loss metric. Return the number of correctly classified
 # samples, the total number of samples and optionally the required loss metric
 def eval_batch(net, batch, config, pre_net=None, criterion=None):
 	inputs, labels = batch  # Get the inputs
+	# pdb.set_trace()
 	inputs, labels = inputs.to(P.DEVICE), labels.to(P.DEVICE)
+	# pdb.set_trace()
 	if pre_net is not None: inputs = pre_net(inputs)[config.PRE_NET_OUT]
 	if hasattr(net, 'set_teacher_signal') and net.training: net.set_teacher_signal(utils.dense2onehot(labels)) # For hebbian supervised learning
 	outputs = net(inputs)[net.CLASS_SCORES]  # Forward step. Take the output from the last layer (class scores)
@@ -39,6 +41,7 @@ def eval_pass(net, dataset, config, pre_net=None):
 	
 	for batch in dataset:
 		# Process batch and count number of hits and total number of samples in the batch
+		# pdb.set_trace()
 		batch_hits, batch_count, _ = eval_batch(net, batch, config, pre_net)
 		hits += batch_hits
 		count += batch_count

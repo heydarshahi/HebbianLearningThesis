@@ -8,7 +8,7 @@ import params as P
 import utils
 import data
 from evaluate import launch_experiment, load_models, eval_pass, eval_batch
-
+import pdb
 
 # Perform a training pass of a model over a dataset and compute training error.
 def train_pass(net, dataset, config, pre_net=None, criterion=None, optimizer=None):
@@ -17,26 +17,30 @@ def train_pass(net, dataset, config, pre_net=None, criterion=None, optimizer=Non
 	# Variables for keeping track of training progress
 	total = 0  # total number of samples processed so far
 	acc = None # training accuracy
+	running_loss = 0
 	
-	for batch in dataset:
+	for i, batch in enumerate(dataset):
 		# Process batch and count number of hits and total number of samples in the batch
 		batch_hits, batch_count, loss = eval_batch(net, batch, config, pre_net, criterion)
-		
+		# pdb.set_trace()
 		# Update statistics
 		total += batch_count
 		batch_acc = batch_hits / batch_count
 		if acc is None: acc = batch_acc
-		else: acc = 0.1 * batch_acc + 0.9 * acc # Exponential running average of accuracy during epoch
+		else: 
+			acc = 0.1 * batch_acc + 0.9 * acc # Exponential running average of accuracy during epoch
 		
 		if optimizer is not None:
 			# Update weights
 			optimizer.zero_grad()  # Zero out accumulated gradients
 			loss.backward()  # Backward step (compute gradients)
 			optimizer.step()  # Optimize (update weights)
+			running_loss += loss
 		
 		# Estimate training progress roughly every 5000 samples (or if this is the last batch)
 		if total % 5000 < config.BATCH_SIZE or total == config.VAL_SET_SPLIT:
 			print("Epoch progress: " + str(total) + "/" + str(config.VAL_SET_SPLIT) + " processed samples")
+			print("RUNNING LOSS: " + str(running_loss.item()/i))
 	
 	return acc
 
@@ -87,13 +91,14 @@ def run_train_iter(config, iter_id):
 		
 		# Training phase
 		print("Training...")
+		# pdb.set_trace()
 		train_acc = train_pass(net, train_set, config, pre_net, criterion, optimizer)
-		print("Training accuracy: {:.2f}%".format(100 * train_acc))
+		print("Training accuracy: {:.2f}%".format(100 * train_acc), flush=True)
 		
 		# Validation phase
 		print("Validating...")
 		val_acc = eval_pass(net, val_set, config, pre_net)
-		print("Validation accuracy: {:.2f}%".format(100 * val_acc))
+		print("Validation accuracy: {:.2f}%".format(100 * val_acc), flush=True)
 		
 		# Update training statistics and saving plots
 		train_acc_data += [train_acc]
@@ -102,15 +107,16 @@ def run_train_iter(config, iter_id):
 		
 		# If validation accuracy has improved update best model
 		if val_acc > best_acc:
-			print("Top accuracy improved! Saving new best model...")
+			print("Top accuracy improved! Saving new best model...", flush=True)
 			best_acc = val_acc
 			best_epoch = epoch
 			utils.save_dict(net.state_dict(), config.MDL_PATH[iter_id])
 			if hasattr(net, 'conv1') and net.input_shape == P.INPUT_SHAPE: utils.plot_grid(net.conv1.weight, config.KNL_PLT_PATH[iter_id])
-			if hasattr(net, 'fc') and net.input_shape == P.INPUT_SHAPE: utils.plot_grid(net.fc.weight.view(-1, *P.INPUT_SHAPE), config.KNL_PLT_PATH[iter_id])
+			if hasattr(net, 'fc') and net.input_shape == P.INPUT_SHAPE: utils.plot_grid(net.fc.weight.view(-1, *P.INPUT_SHAPE), config.KNL_PLT_PATH[iter_id], num_rows=20, num_cols=30)
 			print("Model saved!")
 
 		# Update LR scheduler
+		# pdb.set_trace()
 		if scheduler is not None: scheduler.step()
 		
 

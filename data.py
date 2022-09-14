@@ -9,6 +9,7 @@ from torch.utils.data.sampler import SubsetRandomSampler
 import random
 import params as P
 import utils
+import os
 
 
 # Function to compute mean value, std dev and zca matrix for data normalization and whitening on CIFAR10
@@ -65,7 +66,9 @@ class DataManager:
 		
 		# Basic transformations
 		T = transforms.Compose([
-			transforms.RandomResizedCrop(224),
+			# transforms.RandomResizedCrop(224),
+			# transforms.Resize(256),
+			# transforms.RandomResizedCrop(224),
             transforms.RandomHorizontalFlip(),
 			# The first transform is ToTensor, which transforms the raw CIFAR10 data to a tensor in the form
 			# [depth, width, height]. Additionally, pixel values are mapped from the range [0, 255] to the range [0, 1]
@@ -80,8 +83,12 @@ class DataManager:
 		
 		self.T_train = T
 		self.T_test = transforms.Compose([
-			transforms.Resize(256),
-            transforms.CenterCrop(224),
+			# transforms.Resize(256),
+            # transforms.CenterCrop(224),
+
+			# transforms.Resize(64),
+            # transforms.CenterCrop(64),
+			
 			transforms.ToTensor(),
 			transforms.Normalize(mean, std)
 		])
@@ -108,13 +115,22 @@ class DataManager:
 		# Download the dataset, if necessary, and preprocess with the specified transformations
 		# cifar10 = CIFAR10(root=P.DATA_FOLDER, train=True, download=True, transform=self.T_train)
 
-		data_train = torchvision.datasets.ImageNet(P.DATA_FOLDER, split='train', transform=self.T_train)
+		# data_train = torchvision.datasets.ImageNet(P.DATA_FOLDER, split='train', transform=self.T_train)
+
+		# TODO: USE IDENTICAL ALEXNET ARCHITECTURE & CONVERGE 
+		# TODO 2: CHECK LABEL LOADING (IT'S NOT USING THE METADATA FROM IMAGENET)
+
+		data_train = torchvision.datasets.ImageFolder(os.path.join(P.DATA_FOLDER, 'train'), transform=self.T_train)
 		# The sampler is needed to extract the specific portion of dataset that will be used for training
 		
 		# sampler = SubsetRandomSampler(range(self.VAL_SET_SPLIT))
 		# train_sampler = torch.utils.data.distributed.DistributedSampler(data_train)
 		train_sampler = None
 		# Build a DataLoader allowing to fetch data from the dataset. This is the obj that will be returned to the caller
+
+
+		# TODO: REMOVE THE :100 SANITY CHECK IN THE BELOW LINE!!!
+		# print(data_train.shape)
 		return DataLoader(data_train, batch_size=self.BATCH_SIZE, shuffle=(train_sampler is None),
         num_workers=P.NUM_WORKERS, pin_memory=True, sampler=train_sampler)
 	
@@ -122,11 +138,17 @@ class DataManager:
 		# If all the training batches are used for training, use test set for validation
 		if self.VAL_SET_SPLIT >= P.IMAGENET_NUM_TRN_SAMPLES: return self.get_test()
 		# Download the dataset, if necessary, and preprocess with the specified transformations
-		data_val = torchvision.datasets.ImageNet(root=P.DATA_FOLDER, split='val', transform=self.T_test)
+		# data_val = torchvision.datasets.ImageNet(root=P.DATA_FOLDER, split='val', transform=self.T_test)
+		data_val = torchvision.datasets.ImageFolder(os.path.join(P.DATA_FOLDER, 'val', 'images'), transform=self.T_test)
 		# The sampler is needed to extract another portion of dataset that will be used for validation
 		# val_sampler = torch.utils.data.distributed.DistributedSampler(data_val)
 		val_sampler = None
 		# Build a DataLoader allowing to fetch data from the dataset. This is the obj that will be returned to the caller
+		
+
+		# TODO: REMOVE THE :100 SANITY CHECK IN THE BELOW LINE!!!
+
+
 		return DataLoader(data_val, batch_size=self.BATCH_SIZE, shuffle=(val_sampler is None), num_workers=P.NUM_WORKERS)
 	
 	# def get_test(self):

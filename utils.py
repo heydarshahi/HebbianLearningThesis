@@ -5,6 +5,7 @@ import torch
 
 import params as P
 
+import pdb
 
 # Compute the shape of the output of the convolutional layers of a network. This is useful to correctly set the size of
 # successive FC layers
@@ -59,7 +60,7 @@ def format_time(seconds):
 
 # Print information on the training progress
 def print_train_progress(current_epoch, total_epochs, elapsed_time, best_acc, best_epoch):
-	print("\nEPOCH " + str(current_epoch) + "/" + str(total_epochs))
+	print("\nEPOCH " + str(current_epoch) + "/" + str(total_epochs), flush=True)
 	
 	elapsed_epochs = current_epoch - 1
 	if elapsed_epochs == 0:
@@ -72,11 +73,11 @@ def print_train_progress(current_epoch, total_epochs, elapsed_time, best_acc, be
 		elapsed_time_str = format_time(elapsed_time)
 		avg_epoch_duration_str = format_time(avg_epoch_duration)
 		exp_remaining_time_str = format_time(remaining_epochs * avg_epoch_duration)
-	print("Elapsed time: " + elapsed_time_str)
-	print("Average epoch duration: " + avg_epoch_duration_str)
-	print("Expected remaining time: " + exp_remaining_time_str)
+	print("Elapsed time: " + elapsed_time_str, flush=True)
+	print("Average epoch duration: " + avg_epoch_duration_str, flush=True)
+	print("Expected remaining time: " + exp_remaining_time_str, flush=True)
 	
-	print("Top accuracy so far: {:.2f}%".format(best_acc * 100) + ", at epoch: " + str(best_epoch))
+	print("Top accuracy so far: {:.2f}%".format(best_acc * 100) + ", at epoch: " + str(best_epoch), flush=True)
 
 # Save a figure showing train and validation error statistics in the specified file
 def save_figure(train_acc_data, val_acc_data, path):
@@ -120,3 +121,32 @@ def update_csv(iter_id, accuracy, path):
 			for k, v in d.items(): writer.writerow([k, v])
 	except: pass
 
+
+###### PREPARE VALIDATION SET OF TINY-IMAGENET ######
+"""
+code copied from: https://github.com/DennisHanyuanXu/Tiny-ImageNet/blob/master/src/data_prep.py 
+"""
+
+def create_val_img_folder(dataset_dir='../../datasets-tmp/tiny-imagenet-200'):
+    '''
+    This method is responsible for separating validation images into separate sub folders
+    '''
+    # dataset_dir = os.path.join(args.data_dir, args.dataset)
+    val_dir = os.path.join(dataset_dir, 'val')
+    img_dir = os.path.join(val_dir, 'images')
+
+    fp = open(os.path.join(val_dir, 'val_annotations.txt'), 'r')
+    data = fp.readlines()
+    val_img_dict = {}
+    for line in data:
+        words = line.split('\t')
+        val_img_dict[words[0]] = words[1]
+    fp.close()
+
+    # Create folder if not present and move images into proper folders
+    for img, folder in val_img_dict.items():
+        newpath = (os.path.join(img_dir, folder))
+        if not os.path.exists(newpath):
+            os.makedirs(newpath)
+        if os.path.exists(os.path.join(img_dir, img)):
+            os.rename(os.path.join(img_dir, img), os.path.join(newpath, img))

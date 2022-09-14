@@ -35,7 +35,8 @@ class Net(nn.Module):
 		# First convolutional layer
 		self.conv1 = H.HebbianMap2d(
 			in_channels=3,
-			out_size=(8, 12),
+			# out_size=(8, 12),
+			out_size=96,
 			kernel_size=5,
 			out=H.clp_cos_sim2d,
 			eta=0.1,
@@ -45,7 +46,8 @@ class Net(nn.Module):
 		# Second convolutional layer
 		self.conv2 = H.HebbianMap2d(
 			in_channels=96,
-			out_size=(8, 16),
+			# out_size=(8, 16),
+			out_size=128,
 			kernel_size=3,
 			out=H.clp_cos_sim2d,
 			eta=0.1,
@@ -55,7 +57,8 @@ class Net(nn.Module):
 		# Third convolutional layer
 		self.conv3 = H.HebbianMap2d(
 			in_channels=128,
-			out_size=(12, 16),
+			# out_size=(12, 16),
+			out_size=192,
 			kernel_size=3,
 			out=H.clp_cos_sim2d,
 			eta=0.1,
@@ -65,7 +68,8 @@ class Net(nn.Module):
 		# Fourth convolutional layer
 		self.conv4 = H.HebbianMap2d(
 			in_channels=192,
-			out_size=(16, 16),
+			# out_size=(16, 16),
+			out_size=256,
 			kernel_size=3,
 			out=H.clp_cos_sim2d,
 			eta=0.1,
@@ -78,7 +82,8 @@ class Net(nn.Module):
 		
 		self.fc5 = H.HebbianMap2d(
 			in_channels=self.conv_output_shape[0],
-			out_size=(32, 32),
+			# out_size=(32, 32),
+			out_size=1024,
 			kernel_size=(self.conv_output_shape[1], self.conv_output_shape[2]),
 			out=H.clp_cos_sim2d,
 			eta=0.1,
