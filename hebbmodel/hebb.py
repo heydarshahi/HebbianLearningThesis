@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import utils
+import numpy as np
 
 # Apply unfold operation to input in order to prepare it to be processed against a sliding kernel whose shape
 # is passed as argument.
@@ -155,6 +156,7 @@ class HebbianMap2d(nn.Module):
 	# Types of learning rules
 	RULE_BASE = 'base' # delta_w = eta * lfb * (x - w)
 	RULE_HEBB = 'hebb' # delta_w = eta * y * lfb * (x - w)
+	RULE_KROTOV = 'krotov'
 	
 	# Types of LFB kernels
 	LFB_GAUSS = 'gauss'
@@ -169,14 +171,19 @@ class HebbianMap2d(nn.Module):
 				 competitive=True,
 				 random_abstention=False,
 				 lfb_value=0,
+				 N_hid=75264,
+				 p = 2,
+				 k = 2,
+				 delta=0.2,  # Strength of the anti-hebbian learning,
+				 prec = 1e-30,
 				 similarity=raised_cos2d_pow(2),
-				 out=vector_proj2d,
-				 weight_upd_rule=RULE_BASE,
+				 out=vector_proj2d, # Projection of input on weight vectors
+				 weight_upd_rule=RULE_KROTOV,
 				 eta=0.1,
 				 lr_schedule=None,
 				 tau=1000):
 		super(HebbianMap2d, self).__init__()
-		
+
 		# Init weights
 		out_size_list = [out_size] if not hasattr(out_size, '__len__') else out_size
 		self.out_size = torch.tensor(out_size_list[0:min(len(out_size_list), 3)])
@@ -186,23 +193,28 @@ class HebbianMap2d(nn.Module):
 		stdv = 1 / (in_channels * kernel_size[0] * kernel_size[1]) ** 0.5
 		self.register_buffer('weight', torch.empty(out_channels, in_channels, kernel_size[0], kernel_size[1]))
 		nn.init.uniform_(self.weight, -stdv, stdv) # Same initialization used by default pytorch conv modules (the one from the paper "Efficient Backprop, LeCun")
-		
+
 		# Enable/disable features as random abstention, competitive learning, lateral feedback
 		self.competitive = competitive
 		self.random_abstention = competitive and random_abstention
 		self.lfb_on = competitive and isinstance(lfb_value, str)
 		self.lfb_value = lfb_value
-		
+		self.N_hid = N_hid
+		self.p = p
+		self.k = k
+		self.delta = delta
+		self.prec = prec
+
 		# Set output function, similarity function and learning rule
 		self.similarity = similarity
 		self.out = out
 		self.teacher_signal = None # Teacher signal for supervised training
 		self.weight_upd_rule = weight_upd_rule
-		
+
 		# Initial learning rate and lR scheduling policy. LR wrapped into a registered buffer so that we can save/load it
 		self.register_buffer('eta', torch.tensor(eta))
 		self.lr_schedule = lr_schedule # LR scheduling policy
-		
+
 		# Set parameters related to the lateral feedback feature
 		if self.lfb_on:
 			# Prepare the variables to generate the kernel that will be used to apply lateral feedback
@@ -224,16 +236,24 @@ class HebbianMap2d(nn.Module):
 			self.alpha = torch.exp( torch.log(torch.tensor(sigma_lfb).float()) / tau ).item()
 			if lfb_value == self.LFB_GAUSS or lfb_value == self.LFB_DoG: self.alpha = self.alpha ** 2
 		else: self.register_buffer('lfb_kernel', None)
-		
+
 		# Init variables for statistics collection
 		if self.random_abstention: self.register_buffer('victories_count', torch.zeros(out_channels))
 		else: self.register_buffer('victories_count', None)
-	
+
 	def set_teacher_signal(self, y):
 		self.teacher_signal = y
 	
 	def forward(self, x):
-		y = self.out(x, self.weight)
+		if self.weight_upd_rule == self.RULE_KROTOV:
+			x_transpose = x.permute(0, 2, 3, 1).contiguous().view(x.size(0), -1)
+			self.N_in = x_transpose.shape[1]
+			sig = torch.sign(self.weight)
+			# with p=2, this is equal to <W.v> = I
+			self.tot_input = self.out(x, sig * torch.abs(self.weight).pow(self.p - 1))
+			y = self.tot_input
+		else:
+			y = self.out(x, self.weight)
 		if self.training: self.update(x)
 		return y
 	
@@ -242,9 +262,11 @@ class HebbianMap2d(nn.Module):
 		y = self.similarity(x, self.weight)
 		t = self.teacher_signal
 		if t is not None: t = t.unsqueeze(2).unsqueeze(3) * torch.ones_like(y, device=y.device)
-		y = y.permute(0, 2, 3, 1).contiguous().view(-1, self.weight.size(0))
+		y_old = y
+		y = y.permute(0, 2, 3, 1).contiguous().view(y.size(0), -1)
 		if t is not None: t = t.permute(0, 2, 3, 1).contiguous().view(-1, self.weight.size(0))
 		x_unf = unfold_map2d(x, self.weight.size(2), self.weight.size(3))
+		N_batch = x_unf.shape[0]
 		x_unf = x_unf.permute(0, 2, 3, 1, 4).contiguous().view(y.size(0), 1, -1)
 		
 		# Random abstention
@@ -257,6 +279,11 @@ class HebbianMap2d(nn.Module):
 		if self.competitive:
 			if t is not None: scores *= t
 			winner_mask = (scores == scores.max(1, keepdim=True)[0]).float()
+			if self.weight_upd_rule == self.RULE_KROTOV:
+				second_max = scores - scores*winner_mask
+				second_winner_mask = ((second_max == second_max.max(1, keepdim=True)[0]).float()) * -self.delta
+				winner_mask += second_winner_mask
+
 			if self.random_abstention: # Update statistics if using random abstension
 				winner_mask_sum = winner_mask.sum(0)  # Number of inputs over which a neuron won
 				self.victories_count += winner_mask_sum
@@ -276,7 +303,39 @@ class HebbianMap2d(nn.Module):
 			lfb_out = winner_mask
 			if self.competitive: lfb_out[lfb_out == 0] = self.lfb_value
 			elif t is not None: lfb_out = t
-		
+
+		#if self.weight_upd_rule == self.RULE_KROTOV:
+		#	inputs = x.permute(0, 2, 3, 1).contiguous().view(-1, self.tot_input.size(0))
+		#	tot_input = self.tot_input.permute(0, 2, 3, 1).contiguous().view(-1, self.tot_input.size(0))
+			#y = torch.argsort(self.tot_input, dim=0)  # using tot_input (I) as proxy for h
+			#y1 = torch.zeros((self.N_hid, N_batch))
+			#a = y[self.N_hid - 1, :]
+			#b = np.arange(N_batch)
+			#y1[y[self.N_hid - 1, :], np.arange(N_batch)] = 1.0  # g(max_activation in I) = 1
+			#y1[y[self.N_hid - self.k], np.arange(N_batch)] = -self.delta  # g(second max activation) = -delta
+
+			#tot_input = torch.transpose(self.tot_input, 0, 1)
+		#	y = torch.argsort(tot_input, dim=0)  # using tot_input (I) as proxy for h
+		#	y1 = torch.zeros((self.N_hid, N_batch)).to("cuda:0")  # g(Q)
+		#	y1[y[self.N_hid - 1, :], np.arange(N_batch)] = 1.0  # g(max_activation in I) = 1
+		#	y1[y[self.N_hid - self.k], np.arange(N_batch)] = -self.delta  # g(second max activation) = -delta
+
+			#xx = y1 * self.tot_input + 1  # g(Q) * <W, v>
+			#ds = torch.matmul(y1, torch.transpose(self.inputs, 0, 1)) - torch.mul(xx.reshape(xx.shape[0], 1).repeat(1, self.N_in),
+			#																 self.weight)
+			#nc = torch.max(torch.abs(ds))
+			#tot_input = torch.transpose(tot_input, 0, 1)
+		#	xx = torch.sum(torch.mul(y1, tot_input), 1)  # g(Q) * <W, v>
+		#	a = torch.matmul(y1, torch.transpose(inputs, 0, 1))
+		#	b = xx.reshape(xx.shape[0], 1).repeat(1, self.N_in)
+		#	ds = torch.matmul(y1, torch.transpose(inputs, 0, 1)) - torch.mul(xx.reshape(xx.shape[0], 1).repeat(1, self.N_in),
+		#																	 self.weight)
+		#	nc = torch.max(torch.abs(ds))
+
+		#	if nc < self.prec:
+		#		nc = self.prec
+		#	self.weight += torch.mul(torch.div(ds, nc), self.eta)
+
 		# Compute step modulation coefficient
 		r = lfb_out # RULE_BASE
 		if self.weight_upd_rule == self.RULE_HEBB: r *= y
@@ -299,7 +358,7 @@ class HebbianMap2d(nn.Module):
 		# LFB kernel shrinking and LR schedule
 		if self.lfb_on: self.lfb_kernel = self.lfb_kernel.pow(self.alpha)
 		if self.lr_schedule is not None: self.eta = self.lr_schedule(self.eta)
-	
+
 
 # Generate a batch of random inputs for testing
 def gen_batch(centers, batch_size, win_height, win_width):
