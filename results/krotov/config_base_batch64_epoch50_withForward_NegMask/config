@@ -1,0 +1,11 @@
+	Configuration(
+		config_family=P.CONFIG_FAMILY_HEBB,
+		config_name='config_base', # Val: 27.52, Test: 28.59
+		net_class=hebbmodel.model.Net,
+		batch_size=64,
+		num_epochs=50,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+	),

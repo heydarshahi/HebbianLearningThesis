@@ -1,0 +1,461 @@
+### Starting TaskPrologue of job 501707 on tg081 at Sun 11 Sep 2022 07:18:21 PM CEST
+Running on cores 0-63 with governor ondemand
+Sun Sep 11 19:18:21 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.48.07    Driver Version: 515.48.07    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:1A:00.0 Off |                  N/A |
+| 30%   32C    P8    19W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA GeForce ...  On   | 00000000:1B:00.0 Off |                  N/A |
+| 30%   32C    P8    13W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  NVIDIA GeForce ...  On   | 00000000:3D:00.0 Off |                  N/A |
+| 30%   30C    P8    12W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  NVIDIA GeForce ...  On   | 00000000:3E:00.0 Off |                  N/A |
+| 30%   32C    P8    18W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   4  NVIDIA GeForce ...  On   | 00000000:B1:00.0 Off |                  N/A |
+| 30%   30C    P8    16W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   5  NVIDIA GeForce ...  On   | 00000000:B2:00.0 Off |                  N/A |
+| 30%   32C    P8    10W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   6  NVIDIA GeForce ...  On   | 00000000:DA:00.0 Off |                  N/A |
+| 30%   31C    P8    13W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   7  NVIDIA GeForce ...  On   | 00000000:DB:00.0 Off |                  N/A |
+| 30%   32C    P8    13W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+
+********    Starting Iteration 0    ********
+
+Preparing dataset manager...
+Dataset manager ready!
+Preparing training dataset...
+Files already downloaded and verified
+Training dataset ready!
+Preparing validation dataset...
+Files already downloaded and verified
+Validation dataset ready!
+Preparing network...
+Searching for available saved model for the pre-network...
+Pre-network model loaded!
+Network ready!
+Starting training...
+
+EPOCH 1/20
+Elapsed time: -
+Average epoch duration: -
+Expected remaining time: -
+Top accuracy so far: 0.00%, at epoch: 0
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 40.85%
+Validating...
+Validation accuracy: 45.99%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 2/20
+Elapsed time: 0h 0m 38s
+Average epoch duration: 0h 0m 38s
+Expected remaining time: 0h 12m 2s
+Top accuracy so far: 45.99%, at epoch: 1
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 51.10%
+Validating...
+Validation accuracy: 48.77%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 3/20
+Elapsed time: 0h 1m 19s
+Average epoch duration: 0h 0m 39s
+Expected remaining time: 0h 11m 58s
+Top accuracy so far: 48.77%, at epoch: 2
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 54.82%
+Validating...
+Validation accuracy: 49.19%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 4/20
+Elapsed time: 0h 2m 1s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 11m 28s
+Top accuracy so far: 49.19%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 56.03%
+Validating...
+Validation accuracy: 49.10%
+
+EPOCH 5/20
+Elapsed time: 0h 2m 46s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 0h 11m 4s
+Top accuracy so far: 49.19%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 58.52%
+Validating...
+Validation accuracy: 49.34%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 6/20
+Elapsed time: 0h 3m 24s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 10m 13s
+Top accuracy so far: 49.34%, at epoch: 5
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 60.02%
+Validating...
+Validation accuracy: 49.12%
+
+EPOCH 7/20
+Elapsed time: 0h 4m 9s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 0h 9m 41s
+Top accuracy so far: 49.34%, at epoch: 5
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 64.39%
+Validating...
+Validation accuracy: 49.60%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 8/20
+Elapsed time: 0h 4m 46s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 8m 52s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 67.47%
+Validating...
+Validation accuracy: 49.00%
+
+EPOCH 9/20
+Elapsed time: 0h 5m 27s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 8m 11s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 70.89%
+Validating...
+Validation accuracy: 48.88%
+
+EPOCH 10/20
+Elapsed time: 0h 6m 9s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 0h 7m 31s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 68.79%
+Validating...
+Validation accuracy: 48.67%
+
+EPOCH 11/20
+Elapsed time: 0h 6m 50s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 0h 6m 50s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 78.01%
+Validating...
+Validation accuracy: 48.64%
+
+EPOCH 12/20
+Elapsed time: 0h 7m 27s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 6m 6s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 80.45%
+Validating...
+Validation accuracy: 48.57%
+
+EPOCH 13/20
+Elapsed time: 0h 8m 6s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 5m 24s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 83.14%
+Validating...
+Validation accuracy: 48.60%
+
+EPOCH 14/20
+Elapsed time: 0h 8m 44s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 4m 42s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 82.43%
+Validating...
+Validation accuracy: 48.52%
+
+EPOCH 15/20
+Elapsed time: 0h 9m 24s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 4m 2s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 83.96%
+Validating...
+Validation accuracy: 48.63%
+
+EPOCH 16/20
+Elapsed time: 0h 10m 4s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 3m 21s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 81.42%
+Validating...
+Validation accuracy: 48.61%
+
+EPOCH 17/20
+Elapsed time: 0h 10m 46s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 2m 41s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 83.40%
+Validating...
+Validation accuracy: 48.31%
+
+EPOCH 18/20
+Elapsed time: 0h 11m 29s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 2m 1s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 81.58%
+Validating...
+Validation accuracy: 48.57%
+
+EPOCH 19/20
+Elapsed time: 0h 12m 10s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 1m 21s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 83.45%
+Validating...
+Validation accuracy: 48.66%
+
+EPOCH 20/20
+Elapsed time: 0h 12m 52s
+Average epoch duration: 0h 0m 40s
+Expected remaining time: 0h 0m 40s
+Top accuracy so far: 49.60%, at epoch: 7
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 82.94%
+Validating...
+Validation accuracy: 48.42%
+
+Finished!
+=== JOB_STATISTICS ===
+=== current date     : Sun 11 Sep 2022 07:32:43 PM CEST
+= Job-ID             : 501707 on tinygpu
+= Job-Name           : train.sh
+= Job-Command        : /home/hpc/iwi9/iwi9017h/HebbianLearningThesismaster/train.sh
+= Initial workdir    : /home/hpc/iwi9/iwi9017h/HebbianLearningThesismaster
+= Queue/Partition    : work
+= Slurm account      : iwi9 with QOS=normal
+= Requested resources: cpu=64,mem=184000M,node=1,billing=64,gres/gpu=8,gres/gpu:rtx3080=8 for 01:00:00
+= Elapsed runtime    : 00:14:22
+= Total RAM usage    : 3.4 GiB of requested 179 GiB (1.9%)   
+= Node list          : tg081
+= Subm/Elig/Start/End: 2022-09-11T19:18:20 / 2022-09-11T19:18:20 / 2022-09-11T19:18:21 / 2022-09-11T19:32:43
+======================
+=== Quota infos ======
+    Path              Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/hpc           10.7G    52.4G   104.9G        N/A      53K     500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA GeForce RTX 3080, 00000000:1A:00.0, 946026, 6 %, 2 %, 1753 MiB, 844181 ms

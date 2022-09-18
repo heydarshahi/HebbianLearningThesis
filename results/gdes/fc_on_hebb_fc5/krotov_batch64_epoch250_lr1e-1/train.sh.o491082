@@ -1,0 +1,4614 @@
+### Starting TaskPrologue of job 491082 on tg082 at Tue 09 Aug 2022 03:41:59 PM CEST
+Running on cores 0-63 with governor ondemand
+Tue Aug  9 15:41:59 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.48.07    Driver Version: 515.48.07    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  On   | 00000000:1A:00.0 Off |                  N/A |
+| 30%   32C    P8    17W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   1  NVIDIA GeForce ...  On   | 00000000:1B:00.0 Off |                  N/A |
+| 30%   33C    P8    14W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   2  NVIDIA GeForce ...  On   | 00000000:3D:00.0 Off |                  N/A |
+| 30%   31C    P8    19W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   3  NVIDIA GeForce ...  On   | 00000000:3E:00.0 Off |                  N/A |
+| 30%   32C    P8    17W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   4  NVIDIA GeForce ...  On   | 00000000:B1:00.0 Off |                  N/A |
+| 30%   32C    P8    12W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   5  NVIDIA GeForce ...  On   | 00000000:B2:00.0 Off |                  N/A |
+| 30%   32C    P8    16W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   6  NVIDIA GeForce ...  On   | 00000000:DA:00.0 Off |                  N/A |
+| 30%   32C    P8    21W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+|   7  NVIDIA GeForce ...  On   | 00000000:DB:00.0 Off |                  N/A |
+| 30%   32C    P8    21W / 300W |      1MiB / 10240MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+
+********    Starting Iteration 0    ********
+
+Preparing dataset manager...
+Dataset manager ready!
+Preparing training dataset...
+Files already downloaded and verified
+Training dataset ready!
+Preparing validation dataset...
+Files already downloaded and verified
+Validation dataset ready!
+Preparing network...
+Searching for available saved model for the pre-network...
+Pre-network model loaded!
+Network ready!
+Starting training...
+
+EPOCH 1/250
+Elapsed time: -
+Average epoch duration: -
+Expected remaining time: -
+Top accuracy so far: 0.00%, at epoch: 0
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 17.55%
+Validating...
+Validation accuracy: 16.81%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 2/250
+Elapsed time: 0h 0m 45s
+Average epoch duration: 0h 0m 45s
+Expected remaining time: 3h 10m 2s
+Top accuracy so far: 16.81%, at epoch: 1
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 17.66%
+Validating...
+Validation accuracy: 15.32%
+
+EPOCH 3/250
+Elapsed time: 0h 1m 30s
+Average epoch duration: 0h 0m 45s
+Expected remaining time: 3h 7m 35s
+Top accuracy so far: 16.81%, at epoch: 1
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 16.40%
+Validating...
+Validation accuracy: 18.57%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 4/250
+Elapsed time: 0h 2m 12s
+Average epoch duration: 0h 0m 44s
+Expected remaining time: 3h 1m 50s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 14.44%
+Validating...
+Validation accuracy: 13.42%
+
+EPOCH 5/250
+Elapsed time: 0h 2m 52s
+Average epoch duration: 0h 0m 43s
+Expected remaining time: 2h 56m 56s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 16.50%
+Validating...
+Validation accuracy: 17.87%
+
+EPOCH 6/250
+Elapsed time: 0h 3m 33s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 54m 9s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 16.21%
+Validating...
+Validation accuracy: 16.17%
+
+EPOCH 7/250
+Elapsed time: 0h 4m 17s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 54m 31s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 16.85%
+Validating...
+Validation accuracy: 14.23%
+
+EPOCH 8/250
+Elapsed time: 0h 5m 2s
+Average epoch duration: 0h 0m 43s
+Expected remaining time: 2h 55m 1s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 18.71%
+Validating...
+Validation accuracy: 12.67%
+
+EPOCH 9/250
+Elapsed time: 0h 5m 48s
+Average epoch duration: 0h 0m 43s
+Expected remaining time: 2h 55m 43s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 15.85%
+Validating...
+Validation accuracy: 17.58%
+
+EPOCH 10/250
+Elapsed time: 0h 6m 27s
+Average epoch duration: 0h 0m 43s
+Expected remaining time: 2h 52m 53s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 16.62%
+Validating...
+Validation accuracy: 16.62%
+
+EPOCH 11/250
+Elapsed time: 0h 7m 6s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 50m 33s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 18.46%
+Validating...
+Validation accuracy: 17.10%
+
+EPOCH 12/250
+Elapsed time: 0h 7m 49s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 49m 50s
+Top accuracy so far: 18.57%, at epoch: 3
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 23.20%
+Validating...
+Validation accuracy: 22.65%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 13/250
+Elapsed time: 0h 8m 30s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 48m 49s
+Top accuracy so far: 22.65%, at epoch: 12
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.82%
+Validating...
+Validation accuracy: 24.17%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 14/250
+Elapsed time: 0h 9m 9s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 47m 3s
+Top accuracy so far: 24.17%, at epoch: 13
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.09%
+Validating...
+Validation accuracy: 25.47%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 15/250
+Elapsed time: 0h 9m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 46m 23s
+Top accuracy so far: 25.47%, at epoch: 14
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.84%
+Validating...
+Validation accuracy: 25.81%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 16/250
+Elapsed time: 0h 10m 34s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 45m 35s
+Top accuracy so far: 25.81%, at epoch: 15
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.12%
+Validating...
+Validation accuracy: 25.72%
+
+EPOCH 17/250
+Elapsed time: 0h 11m 15s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 44m 43s
+Top accuracy so far: 25.81%, at epoch: 15
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.46%
+Validating...
+Validation accuracy: 26.27%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 18/250
+Elapsed time: 0h 11m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 44m 3s
+Top accuracy so far: 26.27%, at epoch: 17
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.97%
+Validating...
+Validation accuracy: 26.84%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 19/250
+Elapsed time: 0h 12m 40s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 43m 24s
+Top accuracy so far: 26.84%, at epoch: 18
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.94%
+Validating...
+Validation accuracy: 27.03%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 20/250
+Elapsed time: 0h 13m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 42m 44s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.06%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 21/250
+Elapsed time: 0h 14m 4s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 41m 55s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.80%
+Validating...
+Validation accuracy: 26.81%
+
+EPOCH 22/250
+Elapsed time: 0h 14m 46s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 41m 10s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.27%
+Validating...
+Validation accuracy: 26.62%
+
+EPOCH 23/250
+Elapsed time: 0h 15m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 40m 24s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.29%
+Validating...
+Validation accuracy: 26.84%
+
+EPOCH 24/250
+Elapsed time: 0h 16m 11s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 39m 47s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.69%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 25/250
+Elapsed time: 0h 16m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 38m 57s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.15%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 26/250
+Elapsed time: 0h 17m 33s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 38m 5s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.17%
+Validating...
+Validation accuracy: 26.72%
+
+EPOCH 27/250
+Elapsed time: 0h 18m 15s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 37m 18s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.34%
+Validating...
+Validation accuracy: 26.77%
+
+EPOCH 28/250
+Elapsed time: 0h 18m 55s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 36m 22s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.45%
+Validating...
+Validation accuracy: 26.42%
+
+EPOCH 29/250
+Elapsed time: 0h 19m 38s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 35m 42s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.06%
+Validating...
+Validation accuracy: 26.71%
+
+EPOCH 30/250
+Elapsed time: 0h 20m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 34m 44s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.45%
+Validating...
+Validation accuracy: 26.86%
+
+EPOCH 31/250
+Elapsed time: 0h 21m 0s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 34m 0s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.66%
+Validating...
+Validation accuracy: 26.53%
+
+EPOCH 32/250
+Elapsed time: 0h 21m 43s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 33m 25s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.15%
+Validating...
+Validation accuracy: 26.68%
+
+EPOCH 33/250
+Elapsed time: 0h 22m 24s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 32m 40s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.51%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 34/250
+Elapsed time: 0h 23m 6s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 31m 59s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.80%
+Validating...
+Validation accuracy: 26.79%
+
+EPOCH 35/250
+Elapsed time: 0h 23m 48s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 31m 15s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.06%
+Validating...
+Validation accuracy: 26.67%
+
+EPOCH 36/250
+Elapsed time: 0h 24m 30s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 30m 34s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.53%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 37/250
+Elapsed time: 0h 25m 9s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 29m 30s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.55%
+Validating...
+Validation accuracy: 26.62%
+
+EPOCH 38/250
+Elapsed time: 0h 25m 49s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 28m 39s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.90%
+Validating...
+Validation accuracy: 26.60%
+
+EPOCH 39/250
+Elapsed time: 0h 26m 30s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 27m 56s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.24%
+Validating...
+Validation accuracy: 26.49%
+
+EPOCH 40/250
+Elapsed time: 0h 27m 12s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 27m 13s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.87%
+Validating...
+Validation accuracy: 26.55%
+
+EPOCH 41/250
+Elapsed time: 0h 27m 55s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 26m 34s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.73%
+Validating...
+Validation accuracy: 26.42%
+
+EPOCH 42/250
+Elapsed time: 0h 28m 37s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 25m 53s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.03%
+Validating...
+Validation accuracy: 26.77%
+
+EPOCH 43/250
+Elapsed time: 0h 29m 19s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 25m 13s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.72%
+Validating...
+Validation accuracy: 26.67%
+
+EPOCH 44/250
+Elapsed time: 0h 30m 2s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 24m 35s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.07%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 45/250
+Elapsed time: 0h 30m 44s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 23m 54s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.67%
+Validating...
+Validation accuracy: 26.59%
+
+EPOCH 46/250
+Elapsed time: 0h 31m 25s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 23m 11s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.21%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 47/250
+Elapsed time: 0h 32m 7s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 22m 30s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.99%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 48/250
+Elapsed time: 0h 32m 50s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 21m 51s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.24%
+Validating...
+Validation accuracy: 26.69%
+
+EPOCH 49/250
+Elapsed time: 0h 33m 33s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 21m 11s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.32%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 50/250
+Elapsed time: 0h 34m 15s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 20m 30s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.73%
+Validating...
+Validation accuracy: 26.64%
+
+EPOCH 51/250
+Elapsed time: 0h 34m 57s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 19m 48s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.64%
+Validating...
+Validation accuracy: 26.79%
+
+EPOCH 52/250
+Elapsed time: 0h 35m 39s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 19m 9s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.21%
+Validating...
+Validation accuracy: 26.56%
+
+EPOCH 53/250
+Elapsed time: 0h 36m 22s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 18m 28s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.19%
+Validating...
+Validation accuracy: 26.56%
+
+EPOCH 54/250
+Elapsed time: 0h 37m 4s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 17m 46s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.01%
+Validating...
+Validation accuracy: 26.85%
+
+EPOCH 55/250
+Elapsed time: 0h 37m 46s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 17m 5s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.88%
+Validating...
+Validation accuracy: 26.86%
+
+EPOCH 56/250
+Elapsed time: 0h 38m 29s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 16m 27s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.30%
+Validating...
+Validation accuracy: 26.90%
+
+EPOCH 57/250
+Elapsed time: 0h 39m 11s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 15m 45s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.49%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 58/250
+Elapsed time: 0h 39m 53s
+Average epoch duration: 0h 0m 41s
+Expected remaining time: 2h 15m 5s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.95%
+Validating...
+Validation accuracy: 26.47%
+
+EPOCH 59/250
+Elapsed time: 0h 40m 36s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 14m 25s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.95%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 60/250
+Elapsed time: 0h 41m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 13m 43s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.93%
+Validating...
+Validation accuracy: 26.78%
+
+EPOCH 61/250
+Elapsed time: 0h 42m 0s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 13m 2s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.00%
+Validating...
+Validation accuracy: 26.52%
+
+EPOCH 62/250
+Elapsed time: 0h 42m 43s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 12m 21s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.25%
+Validating...
+Validation accuracy: 26.58%
+
+EPOCH 63/250
+Elapsed time: 0h 43m 25s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 11m 39s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.82%
+Validating...
+Validation accuracy: 26.83%
+
+EPOCH 64/250
+Elapsed time: 0h 44m 8s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 11m 1s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.95%
+Validating...
+Validation accuracy: 26.62%
+
+EPOCH 65/250
+Elapsed time: 0h 44m 51s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 10m 21s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.85%
+Validating...
+Validation accuracy: 26.56%
+
+EPOCH 66/250
+Elapsed time: 0h 45m 33s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 9m 39s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.27%
+Validating...
+Validation accuracy: 26.62%
+
+EPOCH 67/250
+Elapsed time: 0h 46m 16s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 8m 59s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.86%
+Validating...
+Validation accuracy: 26.55%
+
+EPOCH 68/250
+Elapsed time: 0h 46m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 8m 17s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.30%
+Validating...
+Validation accuracy: 26.67%
+
+EPOCH 69/250
+Elapsed time: 0h 47m 40s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 7m 37s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.83%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 70/250
+Elapsed time: 0h 48m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 6m 55s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.32%
+Validating...
+Validation accuracy: 26.59%
+
+EPOCH 71/250
+Elapsed time: 0h 49m 5s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 6m 13s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.11%
+Validating...
+Validation accuracy: 26.55%
+
+EPOCH 72/250
+Elapsed time: 0h 49m 47s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 5m 32s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.38%
+Validating...
+Validation accuracy: 26.58%
+
+EPOCH 73/250
+Elapsed time: 0h 50m 29s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 4m 50s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.69%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 74/250
+Elapsed time: 0h 51m 11s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 4m 7s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.30%
+Validating...
+Validation accuracy: 26.51%
+
+EPOCH 75/250
+Elapsed time: 0h 51m 53s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 3m 25s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.42%
+Validating...
+Validation accuracy: 26.88%
+
+EPOCH 76/250
+Elapsed time: 0h 52m 36s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 2m 44s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.44%
+Validating...
+Validation accuracy: 26.52%
+
+EPOCH 77/250
+Elapsed time: 0h 53m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 2m 2s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.48%
+Validating...
+Validation accuracy: 26.45%
+
+EPOCH 78/250
+Elapsed time: 0h 54m 1s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 1m 22s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.26%
+Validating...
+Validation accuracy: 26.45%
+
+EPOCH 79/250
+Elapsed time: 0h 54m 42s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 2h 0m 39s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.62%
+Validating...
+Validation accuracy: 26.56%
+
+EPOCH 80/250
+Elapsed time: 0h 55m 25s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 59m 57s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.83%
+Validating...
+Validation accuracy: 26.67%
+
+EPOCH 81/250
+Elapsed time: 0h 56m 7s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 59m 15s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.18%
+Validating...
+Validation accuracy: 26.54%
+
+EPOCH 82/250
+Elapsed time: 0h 56m 49s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 58m 32s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.48%
+Validating...
+Validation accuracy: 26.81%
+
+EPOCH 83/250
+Elapsed time: 0h 57m 31s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 57m 51s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.02%
+Validating...
+Validation accuracy: 26.66%
+
+EPOCH 84/250
+Elapsed time: 0h 58m 13s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 57m 9s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.60%
+Validating...
+Validation accuracy: 26.49%
+
+EPOCH 85/250
+Elapsed time: 0h 58m 56s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 56m 28s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.72%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 86/250
+Elapsed time: 0h 59m 38s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 55m 47s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.32%
+Validating...
+Validation accuracy: 26.38%
+
+EPOCH 87/250
+Elapsed time: 1h 0m 21s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 55m 5s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.52%
+Validating...
+Validation accuracy: 26.49%
+
+EPOCH 88/250
+Elapsed time: 1h 1m 3s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 54m 23s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.65%
+Validating...
+Validation accuracy: 26.58%
+
+EPOCH 89/250
+Elapsed time: 1h 1m 45s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 53m 41s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.27%
+Validating...
+Validation accuracy: 26.44%
+
+EPOCH 90/250
+Elapsed time: 1h 2m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 53m 0s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.48%
+Validating...
+Validation accuracy: 26.40%
+
+EPOCH 91/250
+Elapsed time: 1h 3m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 52m 19s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.60%
+Validating...
+Validation accuracy: 26.76%
+
+EPOCH 92/250
+Elapsed time: 1h 3m 53s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 51m 37s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.21%
+Validating...
+Validation accuracy: 26.82%
+
+EPOCH 93/250
+Elapsed time: 1h 4m 35s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 50m 54s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.27%
+Validating...
+Validation accuracy: 26.54%
+
+EPOCH 94/250
+Elapsed time: 1h 5m 17s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 50m 13s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.68%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 95/250
+Elapsed time: 1h 5m 59s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 49m 31s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.60%
+Validating...
+Validation accuracy: 26.60%
+
+EPOCH 96/250
+Elapsed time: 1h 6m 42s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 48m 50s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.20%
+Validating...
+Validation accuracy: 26.76%
+
+EPOCH 97/250
+Elapsed time: 1h 7m 24s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 48m 7s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.27%
+Validating...
+Validation accuracy: 26.89%
+
+EPOCH 98/250
+Elapsed time: 1h 8m 6s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 47m 25s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.93%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 99/250
+Elapsed time: 1h 8m 48s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 46m 43s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.35%
+Validating...
+Validation accuracy: 26.86%
+
+EPOCH 100/250
+Elapsed time: 1h 9m 31s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 46m 1s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.93%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 101/250
+Elapsed time: 1h 10m 13s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 45m 19s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.40%
+Validating...
+Validation accuracy: 26.83%
+
+EPOCH 102/250
+Elapsed time: 1h 10m 55s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 44m 37s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.11%
+Validating...
+Validation accuracy: 26.67%
+
+EPOCH 103/250
+Elapsed time: 1h 11m 37s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 43m 55s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.16%
+Validating...
+Validation accuracy: 26.83%
+
+EPOCH 104/250
+Elapsed time: 1h 12m 19s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 43m 13s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.59%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 105/250
+Elapsed time: 1h 13m 2s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 42m 31s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.31%
+Validating...
+Validation accuracy: 26.71%
+
+EPOCH 106/250
+Elapsed time: 1h 13m 45s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 41m 50s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 30.15%
+Validating...
+Validation accuracy: 26.86%
+
+EPOCH 107/250
+Elapsed time: 1h 14m 27s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 41m 8s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.35%
+Validating...
+Validation accuracy: 26.64%
+
+EPOCH 108/250
+Elapsed time: 1h 15m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 40m 27s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.31%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 109/250
+Elapsed time: 1h 15m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 39m 45s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.52%
+Validating...
+Validation accuracy: 26.76%
+
+EPOCH 110/250
+Elapsed time: 1h 16m 34s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 39m 3s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.79%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 111/250
+Elapsed time: 1h 17m 15s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 38m 20s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.40%
+Validating...
+Validation accuracy: 26.61%
+
+EPOCH 112/250
+Elapsed time: 1h 17m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 37m 38s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.05%
+Validating...
+Validation accuracy: 26.70%
+
+EPOCH 113/250
+Elapsed time: 1h 18m 40s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 36m 56s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.34%
+Validating...
+Validation accuracy: 26.83%
+
+EPOCH 114/250
+Elapsed time: 1h 19m 22s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 36m 13s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.30%
+Validating...
+Validation accuracy: 26.84%
+
+EPOCH 115/250
+Elapsed time: 1h 20m 5s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 35m 32s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.60%
+Validating...
+Validation accuracy: 26.76%
+
+EPOCH 116/250
+Elapsed time: 1h 20m 47s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 34m 50s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.85%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 117/250
+Elapsed time: 1h 21m 29s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 34m 8s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.79%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 118/250
+Elapsed time: 1h 22m 11s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 33m 25s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.46%
+Validating...
+Validation accuracy: 26.86%
+
+EPOCH 119/250
+Elapsed time: 1h 22m 51s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 32m 40s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.00%
+Validating...
+Validation accuracy: 26.62%
+
+EPOCH 120/250
+Elapsed time: 1h 23m 30s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 31m 55s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.20%
+Validating...
+Validation accuracy: 26.73%
+
+EPOCH 121/250
+Elapsed time: 1h 24m 11s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 31m 12s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.80%
+Validating...
+Validation accuracy: 26.64%
+
+EPOCH 122/250
+Elapsed time: 1h 24m 51s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 30m 27s
+Top accuracy so far: 27.03%, at epoch: 19
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.47%
+Validating...
+Validation accuracy: 27.06%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 123/250
+Elapsed time: 1h 25m 33s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 29m 45s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.71%
+Validating...
+Validation accuracy: 26.71%
+
+EPOCH 124/250
+Elapsed time: 1h 26m 16s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 29m 4s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.05%
+Validating...
+Validation accuracy: 26.61%
+
+EPOCH 125/250
+Elapsed time: 1h 27m 0s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 28m 24s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.29%
+Validating...
+Validation accuracy: 26.47%
+
+EPOCH 126/250
+Elapsed time: 1h 27m 44s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 27m 44s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.12%
+Validating...
+Validation accuracy: 26.97%
+
+EPOCH 127/250
+Elapsed time: 1h 28m 27s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 27m 3s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.80%
+Validating...
+Validation accuracy: 26.79%
+
+EPOCH 128/250
+Elapsed time: 1h 29m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 26m 22s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.50%
+Validating...
+Validation accuracy: 26.47%
+
+EPOCH 129/250
+Elapsed time: 1h 29m 51s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 25m 38s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.08%
+Validating...
+Validation accuracy: 27.04%
+
+EPOCH 130/250
+Elapsed time: 1h 30m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 24m 52s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.53%
+Validating...
+Validation accuracy: 26.54%
+
+EPOCH 131/250
+Elapsed time: 1h 31m 13s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 24m 12s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.11%
+Validating...
+Validation accuracy: 26.86%
+
+EPOCH 132/250
+Elapsed time: 1h 31m 57s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 23m 31s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.93%
+Validating...
+Validation accuracy: 26.85%
+
+EPOCH 133/250
+Elapsed time: 1h 32m 40s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 22m 50s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.52%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 134/250
+Elapsed time: 1h 33m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 22m 9s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.98%
+Validating...
+Validation accuracy: 26.77%
+
+EPOCH 135/250
+Elapsed time: 1h 34m 8s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 21m 29s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.96%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 136/250
+Elapsed time: 1h 34m 53s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 20m 50s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.04%
+Validating...
+Validation accuracy: 26.77%
+
+EPOCH 137/250
+Elapsed time: 1h 35m 36s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 20m 8s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.97%
+Validating...
+Validation accuracy: 26.70%
+
+EPOCH 138/250
+Elapsed time: 1h 36m 16s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 19m 24s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.19%
+Validating...
+Validation accuracy: 26.59%
+
+EPOCH 139/250
+Elapsed time: 1h 36m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 18m 42s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.40%
+Validating...
+Validation accuracy: 26.82%
+
+EPOCH 140/250
+Elapsed time: 1h 37m 42s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 18m 1s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.97%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 141/250
+Elapsed time: 1h 38m 25s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 17m 19s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.28%
+Validating...
+Validation accuracy: 26.54%
+
+EPOCH 142/250
+Elapsed time: 1h 39m 5s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 16m 36s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.18%
+Validating...
+Validation accuracy: 26.87%
+
+EPOCH 143/250
+Elapsed time: 1h 39m 48s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 15m 54s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.97%
+Validating...
+Validation accuracy: 26.55%
+
+EPOCH 144/250
+Elapsed time: 1h 40m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 15m 10s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.26%
+Validating...
+Validation accuracy: 26.60%
+
+EPOCH 145/250
+Elapsed time: 1h 41m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 14m 28s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.23%
+Validating...
+Validation accuracy: 26.67%
+
+EPOCH 146/250
+Elapsed time: 1h 41m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 13m 46s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.75%
+Validating...
+Validation accuracy: 26.83%
+
+EPOCH 147/250
+Elapsed time: 1h 42m 36s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 13m 5s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.99%
+Validating...
+Validation accuracy: 26.59%
+
+EPOCH 148/250
+Elapsed time: 1h 43m 20s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 12m 24s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.97%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 149/250
+Elapsed time: 1h 44m 3s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 11m 42s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.64%
+Validating...
+Validation accuracy: 26.61%
+
+EPOCH 150/250
+Elapsed time: 1h 44m 41s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 10m 57s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.58%
+Validating...
+Validation accuracy: 26.83%
+
+EPOCH 151/250
+Elapsed time: 1h 45m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 10m 15s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.77%
+Validating...
+Validation accuracy: 26.72%
+
+EPOCH 152/250
+Elapsed time: 1h 46m 0s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 9m 30s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.88%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 153/250
+Elapsed time: 1h 46m 46s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 8m 50s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.26%
+Validating...
+Validation accuracy: 26.46%
+
+EPOCH 154/250
+Elapsed time: 1h 47m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 8m 8s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.85%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 155/250
+Elapsed time: 1h 48m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 7m 25s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.86%
+Validating...
+Validation accuracy: 26.54%
+
+EPOCH 156/250
+Elapsed time: 1h 48m 53s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 6m 44s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.57%
+Validating...
+Validation accuracy: 26.80%
+
+EPOCH 157/250
+Elapsed time: 1h 49m 36s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 6m 2s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.37%
+Validating...
+Validation accuracy: 26.80%
+
+EPOCH 158/250
+Elapsed time: 1h 50m 19s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 5m 20s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.39%
+Validating...
+Validation accuracy: 26.80%
+
+EPOCH 159/250
+Elapsed time: 1h 51m 1s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 4m 38s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.02%
+Validating...
+Validation accuracy: 26.94%
+
+EPOCH 160/250
+Elapsed time: 1h 51m 44s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 3m 57s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.96%
+Validating...
+Validation accuracy: 26.58%
+
+EPOCH 161/250
+Elapsed time: 1h 52m 26s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 3m 15s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.20%
+Validating...
+Validation accuracy: 26.52%
+
+EPOCH 162/250
+Elapsed time: 1h 53m 9s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 2m 32s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.94%
+Validating...
+Validation accuracy: 26.81%
+
+EPOCH 163/250
+Elapsed time: 1h 53m 51s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 1m 51s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.13%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 164/250
+Elapsed time: 1h 54m 34s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 1m 9s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.65%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 165/250
+Elapsed time: 1h 55m 16s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 1h 0m 27s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.99%
+Validating...
+Validation accuracy: 26.44%
+
+EPOCH 166/250
+Elapsed time: 1h 55m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 59m 44s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.15%
+Validating...
+Validation accuracy: 26.48%
+
+EPOCH 167/250
+Elapsed time: 1h 56m 41s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 59m 2s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.45%
+Validating...
+Validation accuracy: 26.71%
+
+EPOCH 168/250
+Elapsed time: 1h 57m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 58m 20s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.41%
+Validating...
+Validation accuracy: 26.92%
+
+EPOCH 169/250
+Elapsed time: 1h 58m 5s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 57m 38s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.70%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 170/250
+Elapsed time: 1h 58m 47s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 56m 55s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.52%
+Validating...
+Validation accuracy: 26.73%
+
+EPOCH 171/250
+Elapsed time: 1h 59m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 56m 13s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.65%
+Validating...
+Validation accuracy: 27.03%
+
+EPOCH 172/250
+Elapsed time: 2h 0m 11s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 55m 31s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.40%
+Validating...
+Validation accuracy: 26.47%
+
+EPOCH 173/250
+Elapsed time: 2h 0m 53s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 54m 49s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.66%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 174/250
+Elapsed time: 2h 1m 35s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 54m 7s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.47%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 175/250
+Elapsed time: 2h 2m 17s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 53m 24s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.22%
+Validating...
+Validation accuracy: 26.76%
+
+EPOCH 176/250
+Elapsed time: 2h 2m 59s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 52m 42s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.92%
+Validating...
+Validation accuracy: 26.71%
+
+EPOCH 177/250
+Elapsed time: 2h 3m 42s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 52m 0s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.44%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 178/250
+Elapsed time: 2h 4m 24s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 51m 18s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.54%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 179/250
+Elapsed time: 2h 5m 7s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 50m 36s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.88%
+Validating...
+Validation accuracy: 26.49%
+
+EPOCH 180/250
+Elapsed time: 2h 5m 50s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 49m 54s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 31.00%
+Validating...
+Validation accuracy: 26.49%
+
+EPOCH 181/250
+Elapsed time: 2h 6m 33s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 49m 13s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.58%
+Validating...
+Validation accuracy: 26.51%
+
+EPOCH 182/250
+Elapsed time: 2h 7m 16s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 48m 31s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.78%
+Validating...
+Validation accuracy: 26.59%
+
+EPOCH 183/250
+Elapsed time: 2h 7m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 47m 49s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.62%
+Validating...
+Validation accuracy: 26.68%
+
+EPOCH 184/250
+Elapsed time: 2h 8m 43s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 47m 7s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.32%
+Validating...
+Validation accuracy: 26.71%
+
+EPOCH 185/250
+Elapsed time: 2h 9m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 46m 24s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.10%
+Validating...
+Validation accuracy: 26.61%
+
+EPOCH 186/250
+Elapsed time: 2h 10m 8s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 45m 43s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.18%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 187/250
+Elapsed time: 2h 10m 51s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 45m 1s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.11%
+Validating...
+Validation accuracy: 26.61%
+
+EPOCH 188/250
+Elapsed time: 2h 11m 31s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 44m 18s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.33%
+Validating...
+Validation accuracy: 26.98%
+
+EPOCH 189/250
+Elapsed time: 2h 12m 14s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 43m 36s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.23%
+Validating...
+Validation accuracy: 26.70%
+
+EPOCH 190/250
+Elapsed time: 2h 12m 53s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 42m 53s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.15%
+Validating...
+Validation accuracy: 26.89%
+
+EPOCH 191/250
+Elapsed time: 2h 13m 38s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 42m 12s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.11%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 192/250
+Elapsed time: 2h 14m 19s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 41m 29s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.04%
+Validating...
+Validation accuracy: 26.62%
+
+EPOCH 193/250
+Elapsed time: 2h 15m 2s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 40m 47s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.18%
+Validating...
+Validation accuracy: 26.73%
+
+EPOCH 194/250
+Elapsed time: 2h 15m 47s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 40m 6s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.50%
+Validating...
+Validation accuracy: 26.39%
+
+EPOCH 195/250
+Elapsed time: 2h 16m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 39m 23s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.82%
+Validating...
+Validation accuracy: 26.48%
+
+EPOCH 196/250
+Elapsed time: 2h 17m 13s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 38m 42s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.90%
+Validating...
+Validation accuracy: 27.00%
+
+EPOCH 197/250
+Elapsed time: 2h 17m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 37m 59s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.82%
+Validating...
+Validation accuracy: 26.43%
+
+EPOCH 198/250
+Elapsed time: 2h 18m 32s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 37m 16s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.64%
+Validating...
+Validation accuracy: 26.69%
+
+EPOCH 199/250
+Elapsed time: 2h 19m 17s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 36m 34s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.40%
+Validating...
+Validation accuracy: 26.45%
+
+EPOCH 200/250
+Elapsed time: 2h 19m 55s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 35m 51s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.81%
+Validating...
+Validation accuracy: 26.68%
+
+EPOCH 201/250
+Elapsed time: 2h 20m 36s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 35m 9s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.69%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 202/250
+Elapsed time: 2h 21m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 34m 26s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.22%
+Validating...
+Validation accuracy: 26.91%
+
+EPOCH 203/250
+Elapsed time: 2h 22m 1s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 33m 44s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.67%
+Validating...
+Validation accuracy: 26.88%
+
+EPOCH 204/250
+Elapsed time: 2h 22m 46s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 33m 3s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.62%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 205/250
+Elapsed time: 2h 23m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 32m 21s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.10%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 206/250
+Elapsed time: 2h 24m 9s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 31m 38s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.37%
+Validating...
+Validation accuracy: 26.79%
+
+EPOCH 207/250
+Elapsed time: 2h 24m 54s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 30m 57s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.70%
+Validating...
+Validation accuracy: 26.60%
+
+EPOCH 208/250
+Elapsed time: 2h 25m 39s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 30m 15s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.50%
+Validating...
+Validation accuracy: 26.74%
+
+EPOCH 209/250
+Elapsed time: 2h 26m 21s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 29m 33s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.27%
+Validating...
+Validation accuracy: 26.64%
+
+EPOCH 210/250
+Elapsed time: 2h 27m 0s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 28m 50s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.26%
+Validating...
+Validation accuracy: 26.88%
+
+EPOCH 211/250
+Elapsed time: 2h 27m 40s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 28m 7s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.46%
+Validating...
+Validation accuracy: 26.58%
+
+EPOCH 212/250
+Elapsed time: 2h 28m 25s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 27m 25s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.40%
+Validating...
+Validation accuracy: 26.77%
+
+EPOCH 213/250
+Elapsed time: 2h 29m 4s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 26m 43s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 30.30%
+Validating...
+Validation accuracy: 26.52%
+
+EPOCH 214/250
+Elapsed time: 2h 29m 45s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 26m 0s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.32%
+Validating...
+Validation accuracy: 26.61%
+
+EPOCH 215/250
+Elapsed time: 2h 30m 26s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 25m 18s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.61%
+Validating...
+Validation accuracy: 26.52%
+
+EPOCH 216/250
+Elapsed time: 2h 31m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 24m 36s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.65%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 217/250
+Elapsed time: 2h 31m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 23m 54s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.61%
+Validating...
+Validation accuracy: 26.78%
+
+EPOCH 218/250
+Elapsed time: 2h 32m 34s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 23m 12s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.78%
+Validating...
+Validation accuracy: 26.65%
+
+EPOCH 219/250
+Elapsed time: 2h 33m 17s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 22m 30s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.00%
+Validating...
+Validation accuracy: 26.73%
+
+EPOCH 220/250
+Elapsed time: 2h 33m 55s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 21m 47s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.94%
+Validating...
+Validation accuracy: 26.84%
+
+EPOCH 221/250
+Elapsed time: 2h 34m 39s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 21m 5s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.65%
+Validating...
+Validation accuracy: 26.59%
+
+EPOCH 222/250
+Elapsed time: 2h 35m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 20m 22s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.02%
+Validating...
+Validation accuracy: 26.64%
+
+EPOCH 223/250
+Elapsed time: 2h 36m 0s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 19m 40s
+Top accuracy so far: 27.06%, at epoch: 122
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.55%
+Validating...
+Validation accuracy: 27.08%
+Top accuracy improved! Saving new best model...
+Model saved!
+
+EPOCH 224/250
+Elapsed time: 2h 36m 43s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 18m 58s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.35%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 225/250
+Elapsed time: 2h 37m 27s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 18m 16s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.46%
+Validating...
+Validation accuracy: 26.55%
+
+EPOCH 226/250
+Elapsed time: 2h 38m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 17m 34s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 24.13%
+Validating...
+Validation accuracy: 26.73%
+
+EPOCH 227/250
+Elapsed time: 2h 38m 55s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 16m 52s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.60%
+Validating...
+Validation accuracy: 26.72%
+
+EPOCH 228/250
+Elapsed time: 2h 39m 41s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 16m 10s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.79%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 229/250
+Elapsed time: 2h 40m 20s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 15m 28s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.53%
+Validating...
+Validation accuracy: 26.72%
+
+EPOCH 230/250
+Elapsed time: 2h 40m 55s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 14m 45s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.54%
+Validating...
+Validation accuracy: 26.42%
+
+EPOCH 231/250
+Elapsed time: 2h 41m 38s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 14m 3s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 25.10%
+Validating...
+Validation accuracy: 26.80%
+
+EPOCH 232/250
+Elapsed time: 2h 42m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 13m 21s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.11%
+Validating...
+Validation accuracy: 26.81%
+
+EPOCH 233/250
+Elapsed time: 2h 42m 59s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 12m 38s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.71%
+Validating...
+Validation accuracy: 26.66%
+
+EPOCH 234/250
+Elapsed time: 2h 43m 40s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 11m 56s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.67%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 235/250
+Elapsed time: 2h 44m 23s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 11m 14s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.61%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 236/250
+Elapsed time: 2h 45m 7s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 10m 32s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.30%
+Validating...
+Validation accuracy: 26.53%
+
+EPOCH 237/250
+Elapsed time: 2h 45m 49s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 9m 50s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.89%
+Validating...
+Validation accuracy: 26.69%
+
+EPOCH 238/250
+Elapsed time: 2h 46m 32s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 9m 8s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 28.93%
+Validating...
+Validation accuracy: 26.76%
+
+EPOCH 239/250
+Elapsed time: 2h 47m 15s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 8m 26s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.92%
+Validating...
+Validation accuracy: 26.75%
+
+EPOCH 240/250
+Elapsed time: 2h 47m 58s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 7m 43s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.09%
+Validating...
+Validation accuracy: 26.57%
+
+EPOCH 241/250
+Elapsed time: 2h 48m 41s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 7m 1s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.74%
+Validating...
+Validation accuracy: 26.53%
+
+EPOCH 242/250
+Elapsed time: 2h 49m 18s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 6m 19s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.04%
+Validating...
+Validation accuracy: 26.58%
+
+EPOCH 243/250
+Elapsed time: 2h 50m 2s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 5m 37s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 29.36%
+Validating...
+Validation accuracy: 27.03%
+
+EPOCH 244/250
+Elapsed time: 2h 50m 42s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 4m 55s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.13%
+Validating...
+Validation accuracy: 26.84%
+
+EPOCH 245/250
+Elapsed time: 2h 51m 24s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 4m 12s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.84%
+Validating...
+Validation accuracy: 26.50%
+
+EPOCH 246/250
+Elapsed time: 2h 52m 7s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 3m 30s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.99%
+Validating...
+Validation accuracy: 26.54%
+
+EPOCH 247/250
+Elapsed time: 2h 52m 45s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 2m 48s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 31.02%
+Validating...
+Validation accuracy: 26.63%
+
+EPOCH 248/250
+Elapsed time: 2h 53m 28s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 2m 6s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 26.10%
+Validating...
+Validation accuracy: 26.73%
+
+EPOCH 249/250
+Elapsed time: 2h 54m 10s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 1m 24s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.13%
+Validating...
+Validation accuracy: 26.52%
+
+EPOCH 250/250
+Elapsed time: 2h 54m 52s
+Average epoch duration: 0h 0m 42s
+Expected remaining time: 0h 0m 42s
+Top accuracy so far: 27.08%, at epoch: 223
+Training...
+Epoch progress: 5056/40000 processed samples
+Epoch progress: 10048/40000 processed samples
+Epoch progress: 15040/40000 processed samples
+Epoch progress: 20032/40000 processed samples
+Epoch progress: 25024/40000 processed samples
+Epoch progress: 30016/40000 processed samples
+Epoch progress: 35008/40000 processed samples
+Epoch progress: 40000/40000 processed samples
+Training accuracy: 27.13%
+Validating...
+Validation accuracy: 26.55%
+
+Finished!
+=== JOB_STATISTICS ===
+=== current date     : Tue 09 Aug 2022 06:37:57 PM CEST
+= Job-ID             : 491082 on tinygpu
+= Job-Name           : train.sh
+= Job-Command        : /home/hpc/iwi9/iwi9017h/HebbianLearningThesismaster/train.sh
+= Initial workdir    : /home/hpc/iwi9/iwi9017h/HebbianLearningThesismaster
+= Queue/Partition    : work
+= Slurm account      : iwi9 with QOS=normal
+= Requested resources: cpu=64,mem=184000M,node=1,billing=64,gres/gpu=8,gres/gpu:rtx3080=8 for 03:10:00
+= Elapsed runtime    : 02:55:58
+= Total RAM usage    : 3.4 GiB of requested 179 GiB (1.9%)   
+= Node list          : tg082
+= Subm/Elig/Start/End: 2022-08-09T15:41:58 / 2022-08-09T15:41:58 / 2022-08-09T15:41:59 / 2022-08-09T18:37:57
+======================
+=== Quota infos ======
+    Path              Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/hpc           10.3G    52.4G   104.9G        N/A  48,272      500K   1,000K        N/A    
+    /home/vault          0.0K   524.3G  1048.6G        N/A       1      200K     400K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA GeForce RTX 3080, 00000000:1A:00.0, 815454, 6 %, 2 %, 1733 MiB, 10550003 ms
