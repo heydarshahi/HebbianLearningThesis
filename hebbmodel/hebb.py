@@ -234,6 +234,7 @@ class HebbianMap2d(nn.Module):
 	
 	def forward(self, x):
 		y = self.out(x, self.weight)
+		# print(self.training)
 		if self.training: self.update(x)
 		return y
 	

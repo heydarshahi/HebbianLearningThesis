@@ -54,7 +54,7 @@ class Net(nn.Module):
 		# FC Layers
 		self.fc5 = nn.Linear(self.conv_output_size, 1024) # conv_output_size-dimensional input, 300-dimensional output
 		self.bn5 = nn.BatchNorm1d(1024) # Batch Norm layer
-		self.fc6 = nn.Linear(1024, P.NUM_CLASSES) # 300-dimensional input, 10-dimensional output (one per class)
+		self.fc6 = nn.Linear(1024, P.NUM_CLASSES) # 300-dimensional input, 200-dimensional output (one per class)
 	
 	# This function forwards an input through the convolutional layers and computes the resulting output
 	def get_conv_output(self, x):

@@ -797,6 +797,26 @@ CONFIG_LIST = [
 		config_family=P.CONFIG_FAMILY_GDES,
 		config_name='fc_on_hebb_fc5_imagenet', # Val: 41.49, Test: 41.78
 		net_class=basemodel.fc.Net,
+		batch_size=32,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=10000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-2,
+		lr_decay=0.5,
+		milestones=[12, 8],
+		momentum=0.9,
+		l2_penalty=0,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/hebb/config_base/save/model0_imagenet.pt',
+		pre_net_out=hebbmodel.model.Net.BN5
+	),
+	
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='fc_on_random_fc5_imagenet', # Val: ???, Test: ???
+		net_class=basemodel.fc.Net,
 		batch_size=100,
 		num_epochs=1000,
 		iteration_ids=[0],
@@ -809,10 +829,10 @@ CONFIG_LIST = [
 		momentum=0.9,
 		l2_penalty=0,
 		pre_net_class=hebbmodel.model.Net,
-		pre_net_mdl_path=P.PROJECT_ROOT + '/results/hebb/config_base/save/model0_imagenet.pt',
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/hebb/config_random/save/model0_imagenet.pt',
 		pre_net_out=hebbmodel.model.Net.BN5
 	),
-	
+
 	Configuration(
 		config_family=P.CONFIG_FAMILY_GDES,
 		config_name='fc_on_hebb_fc5_no_whiten', # Val: 34.01, Val: 34.39

@@ -13,7 +13,9 @@ import pdb
 # Perform a training pass of a model over a dataset and compute training error.
 def train_pass(net, dataset, config, pre_net=None, criterion=None, optimizer=None):
 	net.train()
-	
+	pre_net.train()
+	# if config.CONFIG_NAME == 'fc_on_random_fc5_imagenet':
+	# 	pre_net.training=False
 	# Variables for keeping track of training progress
 	total = 0  # total number of samples processed so far
 	acc = None # training accuracy
