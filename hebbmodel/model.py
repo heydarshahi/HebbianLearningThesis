@@ -162,32 +162,27 @@ class Net(nn.Module):
 			self.fc5.set_teacher_signal(y)
 		else:
 			# Extend teacher signal for layer 2, 3, 4 and 5
-			l2_knl_per_class = 8
-			l3_knl_per_class = 16
-			l4_knl_per_class = 24
-			l5_knl_per_class = 28
+			l2_knl_per_class = 40  # 8
+			l3_knl_per_class = 80  # 16
+			l4_knl_per_class = 1  # 24
+			l5_knl_per_class = 1  # 28
+
 			self.conv2.set_teacher_signal(
-				torch.cat((
-					y.view(y.size(0), y.size(1), 1).repeat(1, 1, l2_knl_per_class).view(y.size(0), -1),
-					torch.ones(y.size(0), self.conv2.weight.size(0) - l2_knl_per_class * P.NUM_CLASSES, device=y.device)
-				), dim=1)
+				y[:, :128]
 			)
 			self.conv3.set_teacher_signal(
-				torch.cat((
-					y.view(y.size(0), y.size(1), 1).repeat(1, 1, l3_knl_per_class).view(y.size(0), -1),
-					torch.ones(y.size(0), self.conv3.weight.size(0) - l3_knl_per_class * P.NUM_CLASSES, device=y.device)
-				), dim=1)
+				y[:, :192]
 			)
 			self.conv4.set_teacher_signal(
 				torch.cat((
-					y.view(y.size(0), y.size(1), 1).repeat(1, 1, l4_knl_per_class).view(y.size(0), -1),
-					torch.ones(y.size(0), self.conv4.weight.size(0) - l4_knl_per_class * P.NUM_CLASSES, device=y.device)
+					y,
+					torch.ones(y.size(0), self.conv4.weight.size(0) - P.NUM_CLASSES, device=y.device)
 				), dim=1)
 			)
 			self.fc5.set_teacher_signal(
 				torch.cat((
-					y.view(y.size(0), y.size(1), 1).repeat(1, 1, l5_knl_per_class).view(y.size(0), -1),
-					torch.ones(y.size(0), self.fc5.weight.size(0) - l5_knl_per_class * P.NUM_CLASSES, device=y.device)
+					y.view(y.size(0), y.size(1), 1).repeat(1, 1, 5).view(y.size(0), -1),
+					torch.ones(y.size(0), self.fc5.weight.size(0) - P.NUM_CLASSES * 5, device=y.device)
 				), dim=1)
 			)
 

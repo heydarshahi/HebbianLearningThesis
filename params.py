@@ -9,7 +9,7 @@ STATS_FOLDER = RESULT_FOLDER + '/stats'
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 # Parameters for data loading
-DATA_FOLDER = os.environ.get('IMAGENET_DIR', '../../datasets-tmp/tiny-imagenet-200')
+DATA_FOLDER = os.environ.get('IMAGENET_DIR', 'data/datasets-tmp/tiny-imagenet-200')
 # print(DATA_FOLDER)
 
 #TODO: CHANGE THE NUMBER OF SAMPLES
@@ -26,4 +26,5 @@ NUM_CLASSES = 200
 # Experiment configuration parameters
 CONFIG_FAMILY_HEBB = 'hebb' # Key to identify configurations based on hebbian learning
 CONFIG_FAMILY_GDES = 'gdes' # Key to identify configurations based on gradient descent learning
+CONFIG_FAMILY_KROTOV = 'krotov' # Key to identify configurations based on Krotov learning rule
 DEFAULT_CONFIG = 'gdes/config_base'

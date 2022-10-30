@@ -127,7 +127,7 @@ def update_csv(iter_id, accuracy, path):
 code copied from: https://github.com/DennisHanyuanXu/Tiny-ImageNet/blob/master/src/data_prep.py 
 """
 
-def create_val_img_folder(dataset_dir='../../datasets-tmp/tiny-imagenet-200'):
+def create_val_img_folder(dataset_dir='data/datasets-tmp/tiny-imagenet-200'):
     '''
     This method is responsible for separating validation images into separate sub folders
     '''
@@ -150,3 +150,6 @@ def create_val_img_folder(dataset_dir='../../datasets-tmp/tiny-imagenet-200'):
             os.makedirs(newpath)
         if os.path.exists(os.path.join(img_dir, img)):
             os.rename(os.path.join(img_dir, img), os.path.join(newpath, img))
+
+if __name__=='__main__':
+	create_val_img_folder()

@@ -40,7 +40,7 @@ def train_pass(net, dataset, config, pre_net=None, criterion=None, optimizer=Non
 		# Estimate training progress roughly every 5000 samples (or if this is the last batch)
 		if total % 5000 < config.BATCH_SIZE or total == config.VAL_SET_SPLIT:
 			print("Epoch progress: " + str(total) + "/" + str(config.VAL_SET_SPLIT) + " processed samples")
-			print("RUNNING LOSS: " + str(running_loss.item()/i))
+			#print("RUNNING LOSS: " + str(running_loss.item()/i))
 	
 	return acc
 

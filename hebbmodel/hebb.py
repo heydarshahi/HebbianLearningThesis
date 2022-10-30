@@ -155,13 +155,14 @@ class HebbianMap2d(nn.Module):
 	# Types of learning rules
 	RULE_BASE = 'base' # delta_w = eta * lfb * (x - w)
 	RULE_HEBB = 'hebb' # delta_w = eta * y * lfb * (x - w)
+	RULE_KROTOV = 'krotov'
 	
 	# Types of LFB kernels
 	LFB_GAUSS = 'gauss'
 	LFB_DoG = 'DoG'
 	LFB_EXP = 'exp'
 	LFB_DoE = 'DoE'
-	
+
 	def __init__(self,
 				 in_channels,
 				 out_size,
@@ -171,7 +172,10 @@ class HebbianMap2d(nn.Module):
 				 lfb_value=0,
 				 similarity=raised_cos2d_pow(2),
 				 out=vector_proj2d,
-				 weight_upd_rule=RULE_BASE,
+				 weight_upd_rule=RULE_KROTOV,
+				 delta=0.2,  # Strength of the anti-hebbian learning,
+				 N_hid=100,
+				 p=2.0,
 				 eta=0.1,
 				 lr_schedule=None,
 				 tau=1000):
@@ -192,6 +196,11 @@ class HebbianMap2d(nn.Module):
 		self.random_abstention = competitive and random_abstention
 		self.lfb_on = competitive and isinstance(lfb_value, str)
 		self.lfb_value = lfb_value
+		# for Krotov's rule
+		self.delta = delta
+		self.N_hid = N_hid
+		self.k = 2
+		self.p = p
 		
 		# Set output function, similarity function and learning rule
 		self.similarity = similarity
@@ -233,7 +242,16 @@ class HebbianMap2d(nn.Module):
 		self.teacher_signal = y
 	
 	def forward(self, x):
-		y = self.out(x, self.weight)
+		if self.weight_upd_rule == self.RULE_KROTOV:
+			#x_transpose = x.permute(0, 2, 3, 1).contiguous().view(x.size(0), -1)
+			#self.N_in = x_transpose.shape[1]
+			#sig = torch.sign(self.weight)
+			# with p=2, this is equal to <W.v> = I
+			#self.tot_input = self.out(x, sig * torch.abs(self.weight).pow(self.p - 1))
+			#y = self.tot_input
+			y = self.out(x, torch.sign(self.weight) * torch.abs(self.weight).pow(self.p - 1))
+		else:
+			y = self.out(x, self.weight)
 		if self.training: self.update(x)
 		return y
 	
@@ -245,57 +263,83 @@ class HebbianMap2d(nn.Module):
 		y = y.permute(0, 2, 3, 1).contiguous().view(-1, self.weight.size(0))
 		if t is not None: t = t.permute(0, 2, 3, 1).contiguous().view(-1, self.weight.size(0))
 		x_unf = unfold_map2d(x, self.weight.size(2), self.weight.size(3))
+		N_batch = x_unf.shape[0]
 		x_unf = x_unf.permute(0, 2, 3, 1, 4).contiguous().view(y.size(0), 1, -1)
-		
+
 		# Random abstention
 		if self.random_abstention:
 			abst_prob = self.victories_count / (self.victories_count.max() + y.size(0) / y.size(1)).clamp(1)
 			scores = y * (torch.rand_like(abst_prob, device=y.device) >= abst_prob).float().unsqueeze(0)
-		else: scores = y
-		
+		else:
+			scores = y
+
 		# Competition. The returned winner_mask is a bitmap telling where a neuron won and where one lost.
 		if self.competitive:
 			if t is not None: scores *= t
-			winner_mask = (scores == scores.max(1, keepdim=True)[0]).float()
-			if self.random_abstention: # Update statistics if using random abstension
+			if self.weight_upd_rule == self.RULE_KROTOV:
+				#cur_y = torch.argsort(scores, dim=0)
+				#hidden_layer = torch.reshape(cur_y[cur_y.shape[0] - 1, :], [1, cur_y.shape[1]])
+				## g(max_activation in I) = 1
+				#winner_mask = (cur_y == hidden_layer.max(1, keepdim=True)[0]).float()
+				#second_max = cur_y - cur_y * winner_mask
+				#second_max_hidden_layer = torch.reshape(second_max[cur_y.shape[0] - self.k], [1, cur_y.shape[1]])
+				## g(second max activation) = -delta
+				#second_winner_mask = ((cur_y == second_max_hidden_layer.max(1, keepdim=True)[0]).float()) * -self.delta
+				#winner_mask += second_winner_mask
+
+				winner_mask = (scores == scores.max(1, keepdim=True)[0]).float()
+				scores_one = scores * winner_mask
+				scores_two = ((scores_one == scores_one.max(1, keepdim=True)[0]).float()) * -self.delta
+				winner_mask += scores_two
+			else:
+				winner_mask = (scores == scores.max(1, keepdim=True)[0]).float()
+
+			if self.random_abstention:  # Update statistics if using random abstension
 				winner_mask_sum = winner_mask.sum(0)  # Number of inputs over which a neuron won
 				self.victories_count += winner_mask_sum
 				self.victories_count -= self.victories_count.min().item()
-		else: winner_mask = torch.ones_like(y, device=y.device)
-		
+		else:
+			winner_mask = torch.ones_like(y, device=y.device)
+
 		# Lateral feedback
 		if self.lfb_on:
 			lfb_kernel = self.lfb_kernel
-			if self.lfb_value == self.LFB_DoG or self.lfb_value == self.LFB_DoE: lfb_kernel = 2 * lfb_kernel - lfb_kernel.pow(0.5) # Difference of Gaussians/Exponentials (mexican hat shaped function)
+			if self.lfb_value == self.LFB_DoG or self.lfb_value == self.LFB_DoE: lfb_kernel = 2 * lfb_kernel - lfb_kernel.pow(
+				0.5)  # Difference of Gaussians/Exponentials (mexican hat shaped function)
 			lfb_in = F.pad(winner_mask.view(-1, *self.out_size), self.pad)
-			if self.out_size.size(0) == 1: lfb_out = torch.conv1d(lfb_in.unsqueeze(1), lfb_kernel.unsqueeze(0).unsqueeze(1))
-			elif self.out_size.size(0) == 2: lfb_out = torch.conv2d(lfb_in.unsqueeze(1), lfb_kernel.unsqueeze(0).unsqueeze(1))
-			else: lfb_out = torch.conv3d(lfb_in.unsqueeze(1), lfb_kernel.unsqueeze(0).unsqueeze(1))
+			if self.out_size.size(0) == 1:
+				lfb_out = torch.conv1d(lfb_in.unsqueeze(1), lfb_kernel.unsqueeze(0).unsqueeze(1))
+			elif self.out_size.size(0) == 2:
+				lfb_out = torch.conv2d(lfb_in.unsqueeze(1), lfb_kernel.unsqueeze(0).unsqueeze(1))
+			else:
+				lfb_out = torch.conv3d(lfb_in.unsqueeze(1), lfb_kernel.unsqueeze(0).unsqueeze(1))
 			lfb_out = lfb_out.clamp(-1, 1).view_as(y)
 		else:
 			lfb_out = winner_mask
-			if self.competitive: lfb_out[lfb_out == 0] = self.lfb_value
-			elif t is not None: lfb_out = t
-		
+			if self.competitive:
+				lfb_out[lfb_out == 0] = self.lfb_value
+			elif t is not None:
+				lfb_out = t
+
 		# Compute step modulation coefficient
-		r = lfb_out # RULE_BASE
+		r = lfb_out  # RULE_BASE
 		if self.weight_upd_rule == self.RULE_HEBB: r *= y
-		
+
 		# Compute delta
 		r_abs = r.abs()
 		r_sign = r.sign()
 		delta_w = r_abs.unsqueeze(2) * (r_sign.unsqueeze(2) * x_unf - self.weight.view(1, self.weight.size(0), -1))
-		
+
 		# Since we use batches of inputs, we need to aggregate the different update steps of each kernel in a unique
 		# update. We do this by taking the weighted average of teh steps, the weights being the r coefficients that
 		# determine the length of each step
 		r_sum = r_abs.sum(0)
 		r_sum += (r_sum == 0).float()  # Prevent divisions by zero
 		delta_w_avg = (delta_w * r_abs.unsqueeze(2)).sum(0) / r_sum.unsqueeze(1)
-		
+
 		# Apply delta
 		self.weight += self.eta * delta_w_avg.view_as(self.weight)
-		
+
 		# LFB kernel shrinking and LR schedule
 		if self.lfb_on: self.lfb_kernel = self.lfb_kernel.pow(self.alpha)
 		if self.lr_schedule is not None: self.eta = self.lr_schedule(self.eta)

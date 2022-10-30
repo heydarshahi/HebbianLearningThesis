@@ -1665,7 +1665,269 @@ CONFIG_LIST = [
 		pre_net_mdl_path=P.PROJECT_ROOT + '/results/gdes/config_4l/save/model0.pt',
 		pre_net_out=basemodel.model4.Net.BN4
 	),
-	
+
+	################################################################################################################
+	####										KROTOV CONFIGURATIONS												####
+	################################################################################################################
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_batch32_epoch100_noForward',  # Val: 10.43, Test: 9.71
+		net_class=hebbmodel.model.Net,
+		batch_size=32,
+		num_epochs=100,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_batch32_epoch100_withForward_NegMask',  # Val: 10.43, Test: 9.71
+		net_class=hebbmodel.model.Net,
+		batch_size=32,
+		num_epochs=100,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_batch32_epoch100_withForward',  # Val: 10.43, Test: 9.71
+		net_class=hebbmodel.model.Net,
+		batch_size=32,
+		num_epochs=100,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_batch64_epoch20_withForward_NegMask',  # Val: 10.43, Test: 9.71
+		net_class=hebbmodel.model.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_batch64_epoch50_withForward_NegMask',  # Val: 10.43, Test: 9.71
+		net_class=hebbmodel.model.Net,
+		batch_size=64,
+		num_epochs=50,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_1l_batch64_epoch50',  # Val: , Test:
+		net_class=basemodel.model1.Net,
+		batch_size=64,
+		num_epochs=50,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=False,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=2e-2,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_1l_batch64_epoch2',  # Val: , Test:
+		net_class=basemodel.model1.Net,
+		batch_size=64,
+		num_epochs=2,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=False,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=2e-2,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top1_krotov',  # Val: , Test:
+		net_class=basemodel.top1.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=7e-2,
+		pre_net_class=hebbmodel.model1.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_1l_batch64_epoch50/save/model0.pt',
+		pre_net_out=hebbmodel.model1.Net.BN1
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top2_krotov',  # Val: , Test:
+		net_class=basemodel.top2.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=6e-2,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_base_batch64_epoch20_withForward_NegMask/save/model0.pt',
+		pre_net_out=hebbmodel.model.Net.BN2
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top2_krotov_noForward',  # Val: , Test:
+		net_class=basemodel.top2.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=6e-2,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_base_batch32_epoch100_noForward/save/model0.pt',
+		pre_net_out=hebbmodel.model.Net.BN2
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top3_krotov',  # Val: , Test:
+		net_class=basemodel.top3.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=5e-2,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_base_batch64_epoch20_withForward_NegMask/save/model0.pt',
+		pre_net_out=hebbmodel.model.Net.BN3
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top3_krotov_noForward',  # Val: , Test:
+		net_class=basemodel.top3.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=5e-2,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_base_batch32_epoch100_noForward/save/model0.pt',
+		pre_net_out=hebbmodel.model.Net.BN3
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top4_krotov',  # Val: , Test:
+		net_class=basemodel.top4.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=5e-4,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_base_batch64_epoch20_withForward_NegMask/save/model0.pt',
+		pre_net_out=hebbmodel.model.Net.BN4
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_GDES,
+		config_name='top4_krotov_noForward',  # Val: , Test:
+		net_class=basemodel.top4.Net,
+		batch_size=64,
+		num_epochs=20,
+		iteration_ids=[0],
+		val_set_split=40000,
+		augment_data=False,
+		whiten_data=True,
+		learning_rate=1e-3,
+		lr_decay=0.5,
+		milestones=range(10, 20),
+		momentum=0.9,
+		l2_penalty=5e-4,
+		pre_net_class=hebbmodel.model.Net,
+		pre_net_mdl_path=P.PROJECT_ROOT + '/results/krotov/config_base_batch32_epoch100_noForward/save/model0.pt',
+		pre_net_out=hebbmodel.model.Net.BN4
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_imagenet',  # Val: 27.52, Test: 28.59
+		net_class=hebbmodel.model.Net,
+		batch_size=64,
+		num_epochs=50,
+		iteration_ids=[0],
+		val_set_split=10000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
+	Configuration(
+		config_family=P.CONFIG_FAMILY_KROTOV,
+		config_name='config_base_imagenet_update2_0.2delta_10epochs_2batch',  # Val: , Test:
+		net_class=hebbmodel.model.Net,
+		batch_size=2,
+		num_epochs=10,
+		iteration_ids=[0],
+		val_set_split=10000,
+		augment_data=False,
+		whiten_data=True,
+	),
+
 ]
 
 
